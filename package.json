@@ -1,7 +1,7 @@
 {
 	"name": "@hexadrop/tsconfig",
 	"version": "0.0.0",
-	"description": "A base TSConfig for working with Node 20 + ESM + Strictest.",
+	"description": "A base TSConfig for working with Node + ESM + Strictest.",
 	"keywords": [
 		"tsconfig"
 	],
