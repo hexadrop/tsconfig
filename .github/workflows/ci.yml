@@ -12,7 +12,6 @@ jobs:
         name: Release
         runs-on: ubuntu-latest
         if: ${{ github.event_name == 'push' }}
-        needs: [ check ]
         permissions:
             contents: 'write'
             id-token: 'write'
