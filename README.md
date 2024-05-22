@@ -1,21 +1,21 @@
 <h1 align="center">
-  Hexatool's TypeScript configuration
+  Hexadrop's TypeScript configuration
 </h1>
 
 <p align="center">
-   TSConfig for working with Node 20 + ESM + Strictest.
+   TSConfig for working with Node + ESM + Strictest.
 </p>
 
 ## Installation
 
 ```bash
-npm install --save-dev @hexatool/tsconfig
+npm install --save-dev @hexadrop/tsconfig
 ```
 
-**Using yarn**
+**Using bun**
 
 ```bash
-yarn add @hexatool/tsconfig --dev
+bun add -d @hexadrop/tsconfig
 ```
 
 ## How to use
@@ -24,11 +24,11 @@ Add it to your `tsconfig.json` file:
 
    ```json
    {
-     "extends": "@hexatool/tsconfig"
+     "extends": "@hexadrop/tsconfig"
    }
    ```
 
-## Hexatool Code Quality Standards
+## Hexadrop Code Quality Standards
 
 Publishing this package we are committing ourselves to the following code quality standards:
 

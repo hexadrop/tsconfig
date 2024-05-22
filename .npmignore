@@ -1,8 +1,5 @@
 .changeset
 .github
 .idea
-.yarn
-.editorconfig
-.yarnrc.yml
+bun.lockb
 renovate.json
-yarn.lock
