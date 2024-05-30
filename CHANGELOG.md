@@ -1,5 +1,11 @@
 # @hexadrop/tsconfig
 
+## 0.0.5
+
+### Patch Changes
+
+- revert: include `"allowImportingTsExtensions": true`
+
 ## 0.0.4
 
 ### Patch Changes
