@@ -1,33 +1,39 @@
-name: Release
+name: Continuous integration
 
 on:
     push:
         branches: [ main ]
+    pull_request:
+        branches: [ main ]
+        types: [ opened, synchronize ]
 
 jobs:
     release:
         name: Release
         runs-on: ubuntu-latest
+        if: ${{ github.event_name == 'push' }}
         permissions:
             contents: 'write'
+            id-token: 'write'
+            issues: 'write'
             pull-requests: 'write'
         steps:
             -   name: Checkout
                 uses: actions/checkout@v4
 
-            -   name: Setup Volta
-                uses: volta-cli/action@v4
+            -   name: Setup bun
+                uses: oven-sh/setup-bun@v1
 
             -   name: Install dependencies
-                run: yarn install --immutable
+                run: bun install
 
             -   name: Create Release Pull Request or Publish to npm
                 uses: changesets/action@v1
                 with:
-                    publish: yarn publish
-                    version: yarn version
+                    publish: bun changeset publish
+                    version: bun changeset version
                     commit: 'chore: release'
                     title: 'chore: release'
                 env:
-                    GITHUB_TOKEN: ${{ secrets.HEXATOOL_GITHUB_TOKEN }}
-                    NPM_TOKEN: ${{ secrets.HEXATOOL_NPM_TOKEN }}
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    NPM_TOKEN: ${{ secrets.HEXADROP_NPM_TOKEN }}

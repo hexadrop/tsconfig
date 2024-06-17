@@ -1,13 +1,31 @@
-# @hexatool/tsconfig
+# @hexadrop/tsconfig
 
-## 20.0.1
+## 0.0.5
 
 ### Patch Changes
 
-- dbf2558: Change lib to `es2022`
+- revert: include `"allowImportingTsExtensions": true`
 
-## 20.0.0
+## 0.0.4
 
-### Major Changes
+### Patch Changes
 
-- 51e313e: Added TypeScript 5 and Node 20
+- 77f6fc7: Include `"allowImportingTsExtensions": true`
+
+## 0.0.3
+
+### Patch Changes
+
+- 8fe0d16: Include `"jsxImportSource": "react"`
+
+## 0.0.2
+
+### Patch Changes
+
+- c2ef64c: Remove `baseUrl`
+
+## 0.0.1
+
+### Patch Changes
+
+- Initial release

@@ -1,20 +1,18 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
-	"display": "Node 20 + ESM + Strictest",
+	"display": "Hexadrop",
 	"compilerOptions": {
-		"lib": [
-			"es2022"
-		],
-		"module": "es2022",
-		"target": "es2022",
-		"moduleResolution": "node",
-
-		"verbatimModuleSyntax": true,
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleDetection": "force",
+		"moduleResolution": "bundler",
 
 		"strict": true,
 		"allowUnusedLabels": false,
 		"allowUnreachableCode": false,
 		"exactOptionalPropertyTypes": true,
+		"forceConsistentCasingInFileNames": true,
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitOverride": true,
 		"noImplicitReturns": true,
@@ -23,10 +21,22 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
+
+		"resolveJsonModule": true,
+
+		"allowJs": true,
 		"checkJs": true,
 
-		"esModuleInterop": true,
 		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true
-	}
+
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+
+		"jsx": "react-jsx",
+		"jsxImportSource": "react"
+	},
+	"exclude": ["**/dist/**", "node_modules"]
 }
