@@ -19,6 +19,6 @@
 		"access": "public"
 	},
 	"devDependencies": {
-		"@changesets/cli": "2.29.0"
+		"@changesets/cli": "2.29.1"
 	}
 }
