@@ -2,7 +2,6 @@
 .github
 .husky
 .idea
-bun.lockb
 bun.lock
 renovate.json
 commitlint.config.ts
