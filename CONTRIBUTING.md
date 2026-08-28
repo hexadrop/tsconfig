@@ -174,15 +174,14 @@ This project uses GitFlow with Changesets for versioning and npm publication.
 
 ### Automated Workflows
 
-| Workflow                                | Trigger                                  | Responsibility                                                                          |
-|-----------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------------|
-| `.github/workflows/ci.yml`              | Push/PR to `main` or `develop`           | Reusable placeholder for checks (currently noop; add scripts as needed)                  |
-| `.github/workflows/release-prepare.yml` | Push to `develop`                        | Creates or updates the draft release PR to `main`                                       |
-| `.github/workflows/release.yml`         | Push to `main` or `develop`              | Publishes the stable package to npm under `latest` (detects changesets and decides)     |
-| `.github/workflows/sync-to-develop.yml` | Merge of any PR into `main`              | Opens/updates the sync PR `internal/sync-from-main-to-develop`                          |
-| `.github/workflows/pr-validate.yml`     | Every PR                                 | Validates PR title, linked issue, and label                                             |
-| `.github/workflows/pr-labeler.yml`      | `pull_request_target`                    | Adds `release` label to auto-generated release branches                                 |
-| `.github/workflows/pr-renovate-changesets.yml` | Renovate PRs                  | Automatically adds a changeset to renovate dependency updates                            |
+| Workflow                                       | Trigger                     | Responsibility                                                                      |
+|------------------------------------------------|-----------------------------|-------------------------------------------------------------------------------------|
+| `.github/workflows/release-prepare.yml`        | Push to `develop`           | Creates or updates the draft release PR to `main`                                   |
+| `.github/workflows/release.yml`                | Push to `main` or `develop` | Publishes the stable package to npm under `latest` (detects changesets and decides) |
+| `.github/workflows/sync-to-develop.yml`        | Merge of any PR into `main` | Opens/updates the sync PR `internal/sync-from-main-to-develop`                      |
+| `.github/workflows/pr-validate.yml`            | Every PR                    | Validates PR title, linked issue, and label                                         |
+| `.github/workflows/pr-labeler.yml`             | `pull_request_target`       | Adds `release` label to auto-generated release branches                             |
+| `.github/workflows/pr-renovate-changesets.yml` | Renovate PRs                | Automatically adds a changeset to renovate dependency updates                       |
 
 ### Merge Methods per Pull Request
 
