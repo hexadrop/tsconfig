@@ -1,5 +1,10 @@
 .changeset
 .github
+.husky
 .idea
-bun.lockb
+bun.lock
 renovate.json
+commitlint.config.ts
+eslint.config.js
+lint-staged.config.ts
+lint-staged.config.js
